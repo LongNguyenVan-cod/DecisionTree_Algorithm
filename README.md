@@ -10,4 +10,5 @@ Dự đoán liệu khách hàng có khả năng phải đối mặt với tình 
 
 # Thông tin bộ dữ liệu
 Bộ dữ liệu gồm 16 cột chứa các thông tin về nhân khẩu học, hành vi và tài chính khách hàng của doanh nghiệp, bộ dữ liệu đã được giản lược bớt một số thông tin để đảm bảo tính bảo mật thông tin của khách 
-![table.png](attachment:90b6f382-aadd-4f60-ba8d-897aefbd9267:table.png)
+
+<img width="1080" height="611" alt="Screenshot 2025-07-01 084245" src="https://github.com/user-attachments/assets/a1b709dc-4302-4114-9a30-30a5a81489d4" />
