@@ -1,7 +1,7 @@
 # Decision Tree Classifier
 Sử dụng thuật toán Decision Tree Classifier để tạo mô hình gợi ý phê duyệt khoản vay khách hàng của doanh nghiệp tài chính
 
-**Bối cảnh giả định**
+#**Bối cảnh giả định**
 
      Doanh nghiệp tài chính thường phải đối mặt với rủi ro liên quan tới các khoản tín dụng,<br>
 việc dự đoán rủi ro tín dụng là rất quan trọng để giảm thiểu tình trạng vỡ nợ và tối ưu hóa kết<br> quả kinh doanh.
