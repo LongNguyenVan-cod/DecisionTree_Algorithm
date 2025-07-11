@@ -1,6 +1,4 @@
-
-
-# Import to library
+# IMPORT LIBRARY
 import pandas as pd
 import numpy as np
 
@@ -27,20 +25,19 @@ import joblid
 
 
 
-# Create Function 
+# CREATE FUNCTION
 def creat_df(link):
     # Setup display in pandas
     pd.set_option("display.max_columns", None)
     path = "https://drive.google.com/uc?export=download&id=" + link.split("/")[-2]
-
+    
     return pd.read_csv(path)
-
 
 def ohe_convert(df_cal, columns):
     # Encoding by one hot encoding method
     for col in columns:
         df_cal = df_cal.join(pd.get_dummies(df_cal[col], prefix=col))
-
+        
     return df_cal
 
 def _tunning_model(model, X_train, X_test, y_train, y_test):
@@ -61,21 +58,23 @@ def _tunning_model(model, X_train, X_test, y_train, y_test):
 
     return model, acc, recall, prec, f1, classification_report(y_test, y_pred), visual_cm
 
-# Get file from link
+
+
+# GET DATASET FROM LINK
 link = "https://drive.google.com/file/d/1BDDaPR6nBXyeihV6KJ3rreOEe63GnX5f/view"
 df = creat_df(link)
 print(df.head(10))
 
 
 
-# Summary dataset by pandas
-# Make copy data set
+# SUMMARY DATASET BY PANDAS
+# Make copy dataset
 df_client = df.copy()
 
 # Display shape of data (rows and columns)
-# print(f"Rows of dataset: {df_client.shape[0]}") 
+print(f"Rows of dataset: {df_client.shape[0]}") 
 # Rows of dataset: 4521
-# print(f"Columns of dataset: {df_client.shape[1]}")
+print(f"Columns of dataset: {df_client.shape[1]}")
 # Columns of dataset: 16
 
 # Information dataset
@@ -91,7 +90,7 @@ print(f"Duplicate rows of dataset: {df_client.duplicated().sum()}")
 # Duplicate rows of dataset: 0
 
 # Delete duplicate row
-# df_employ.drop_duplicates()
+df_employ.drop_duplicates()
 
 # Check missing values
 total = df_client.isnull().sum()
@@ -102,24 +101,23 @@ for i in range(len(df_client.columns)):
     info_data = [df_client.columns[i], total[i], percent[i]]
     data.append(info_data)
 
-# print(data)
 df_missing_data = pd.DataFrame(data, columns=['Features', 'Total Missing', 'Percent Missing'])
 # Show sumary table
 print(df_missing_data)
 
-# Data distribution numerical and object types
+# Dataset distribution numerical and object types
 print(df_client.describe())
 print(df_client.describe(exclude=[int, float]))
 
 
 
-# Check imbalance data
+# CHECK IMBALANCE DATA
 # Application for Target value y(yes/no approved)
 print(f'Distribution TARGET VALUE:\n {df_client['y'].value_counts()}')
 
 
 
-# Encoding data
+# ENCODING DATA
 # Data type numerical and categorical
 categorical_df = df_client.select_dtypes(exclude=[int, float])
 list_col = []
@@ -184,7 +182,7 @@ for col in columns_gr:
 
 
 
-# Imbalance 
+# IMBALANCE DATA 
 # Make a copy datafram to avoid errors with post-processing data
 # Shuffle dataset
 df_client_encod = shuffle(df_client_encod)
@@ -230,7 +228,8 @@ X_test = std_scaler.transform(X_test)
 
 
 
-# Find the best parameters
+# TRAIN AND EVALUATE MODEL
+# Find best parameter of model
 md_dec_tree_list = []
 depth =[5, 9, 15, 20, 30]
 
@@ -254,8 +253,9 @@ df_param = pd.DataFrame(md_dec_tree_list, columns=['name_model', 'acc', 'recall'
 df_param.columns = ['name_model', 'acc', 'recall on GOOD', 'prec on GOOD', 'f1', 'report', 'visual']
 # Show table
 print(df_param)
+# With max_depth = 15 model optimized
 
-# Choose max_depth = 15 and retrain model base on param table
+# Train model base on param table
 dtc = DecisionTreeClassifier(criterion='gini', max_depth=15)
 
 model, acc, recall, prec, f1, report, visual_cm = _tunning_model(dtc, X_train_re, X_test, y_train_re, y_test)
@@ -268,8 +268,7 @@ print(report)
 visual_cm.plot()
 
 
-
-# Create Diagram Decision Tree from model
+# CREATE DIAGRAM DECISION TREE FROM MODEL
 # Type image
 fig = plt.figure(figsize=(50,40))
 
@@ -283,6 +282,7 @@ text_representation = tree.export_text(model)
 with open("decistion_tree.log", "w") as fout:
     fout.write(text_representation)
 
-# Save model
+
+# SAVE MODEL
 joblib.dump(dtc, "DecisionTree_Model.pkl")
 
