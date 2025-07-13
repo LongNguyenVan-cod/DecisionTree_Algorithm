@@ -28,6 +28,10 @@ Bộ dữ liệu sau khi được xử lý
 <img width="553" height="603" alt="Screenshot 2025-07-09 074558" src="https://github.com/user-attachments/assets/8a324f67-1118-45cc-b2f8-639e75c96af0" />
 
 # Train & Evaluate
-Để mô hình học tập hiệu quả các tham số truyền vào cần được xác định phù hợp. Phương pháp tìm kiếm các tham số được sử dụng thử trong một phạm vi nhất định và đánh giá qua các chỉ số như độ chuẩn xác, độ nhạy, độ chính xác, ma trận nhầm lẫn,... từ đó đưa ra tham số tối ưu.
-
+Để mô hình học tập hiệu quả các tham số truyền vào cần được xác định phù hợp. Phương pháp tìm kiếm các tham số được sử dụng thử trong một phạm vi nhất định và đánh giá qua các chỉ số như độ chuẩn xác, độ nhạy, độ chính xác, ma trận nhầm lẫn,... từ đó đưa ra tham số tối ưu. <br/>
+Mô hình với số lớp là 15 và tiêu chí xác định bằng gini index được đánh giá tối ưu cho bài toán
 <img width="915" height="422" alt="Screenshot 2025-07-09 083137" src="https://github.com/user-attachments/assets/7624221a-e493-4304-a696-ed03e369060d" />
+Trực quan hóa mô hình 
+
+[tree_map.pdf](https://github.com/user-attachments/files/21201911/tree_map.pdf)
+
