@@ -33,6 +33,6 @@ Mô hình với số lớp là 15 và tiêu chí xác định bằng gini index 
 <img width="915" height="422" alt="Screenshot 2025-07-09 083137" src="https://github.com/user-attachments/assets/7624221a-e493-4304-a696-ed03e369060d" />
 <br/>
 Trực quan hóa mô hình <br/>
-Yếu tố tác động lớn nhất tới quyết định khách hàng có được phê duyệt hay không là duration (thời lượng liên hệ cuối cùng)
+Yếu tố tác động lớn nhất tới quyết định khách hàng có được phê duyệt hay không là duration (thời lượng liên hệ cuối cùng) <br/>
 [tree_map.pdf](https://github.com/user-attachments/files/21201911/tree_map.pdf)
 
