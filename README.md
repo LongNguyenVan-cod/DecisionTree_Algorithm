@@ -1,6 +1,5 @@
 # Decision Tree Classifier
 Sử dụng thuật toán Decision Tree Classifier để tạo mô hình gợi ý phê duyệt khoản vay khách hàng của doanh nghiệp tài chính <br/>
-[decistion_tree.log](https://github.com/user-attachments/files/21201925/decistion_tree.log)
 
 # Context
 Doanh nghiệp tài chính thường phải đối mặt với rủi ro liên quan tới các khoản tín dụng,
@@ -10,6 +9,7 @@ việc dự đoán rủi ro tín dụng là rất quan trọng để giảm thi�
 Dự đoán liệu khách hàng có khả năng phải đối mặt với tình trạng vỡ nợ tín dụng hay không dựa trên dữ liệu nhân khẩu học, tài chính và hành vi. Dự đoán này sẽ hỗ trợ doanh nghiệp chủ động xác định các khách hàng có rủi ro cao và triển khai các biện pháp phòng ngừa phù hợp.
 
 # Dataset Information
+Link data: https://drive.google.com/file/d/1BDDaPR6nBXyeihV6KJ3rreOEe63GnX5f/view <br/>
 Bộ dữ liệu gồm 16 cột chứa các thông tin về nhân khẩu học, hành vi và tài chính khách hàng của doanh nghiệp, bộ dữ liệu đã được giản lược bớt một số thông tin để đảm bảo tính bảo mật thông tin của khách hàng <br/>
 Giải thích ý nghĩa các cột thông tin trong bộ dữ liệu
 <img width="1080" height="611" alt="Screenshot 2025-07-01 084245" src="https://github.com/user-attachments/assets/a1b709dc-4302-4114-9a30-30a5a81489d4" />
@@ -36,5 +36,7 @@ Mô hình với số lớp là 15 và tiêu chí xác định bằng gini index 
 <br/>
 Trực quan hóa mô hình <br/>
 Yếu tố tác động lớn nhất tới quyết định khách hàng có được phê duyệt hay không là duration (thời lượng liên hệ cuối cùng) <br/>
-[tree_map.pdf](https://github.com/user-attachments/files/21201911/tree_map.pdf)
+[tree_map.pdf](https://github.com/user-attachments/files/21201911/tree_map.pdf) <br/>
+[decistion_tree.log](https://github.com/user-attachments/files/21201925/decistion_tree.log)
+
 
