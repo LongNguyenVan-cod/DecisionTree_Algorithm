@@ -1,5 +1,6 @@
-[decistion_tree.log](https://github.com/user-attachments/files/21201925/decistion_tree.log)# Decision Tree Classifier
-Sử dụng thuật toán Decision Tree Classifier để tạo mô hình gợi ý phê duyệt khoản vay khách hàng của doanh nghiệp tài chính
+# Decision Tree Classifier
+Sử dụng thuật toán Decision Tree Classifier để tạo mô hình gợi ý phê duyệt khoản vay khách hàng của doanh nghiệp tài chính <br/>
+[decistion_tree.log](https://github.com/user-attachments/files/21201925/decistion_tree.log)
 
 # Context
 Doanh nghiệp tài chính thường phải đối mặt với rủi ro liên quan tới các khoản tín dụng,
